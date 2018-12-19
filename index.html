@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日立智能养老系统</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/signin_add.css" rel="stylesheet">
+
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/signin_add.js"></script>
+</head>
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand"><span>HITACHI</span></h3>
+            </div>
+        </header>
+
+        <main role="main" class="inner cover">
+            <div class="container">
+                <h1 class="font-weight-bold">日立智能养老系统</h1>
+                <p>扫码或输入用户ID 查看训练进度及检测项目</p>
+    
+                <form name=“login" class="signinForm" novalidate>
+                    <div class="form-group row d-flex justify-content-end">
+                        <div class="col-sm-2 col-lg-1">
+                        <label for="userID"><i class="fas fa-user fa-2x"></i></label>
+                        </div>
+                        <div class="col-sm-6 col-lg-5">
+                            <input type="text" id="userID" class="form-control" placeholder="用户ID" required>
+                            <div class="invalid-feedback">
+                            请输入正确的用户ID。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex justify-content-end">
+                        <div class="col-sm-6 col-lg-5">
+                            <button type="submit" class="btn btn-primary btn-block">开 始</button>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </main>
+
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>2018 Hitachi All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

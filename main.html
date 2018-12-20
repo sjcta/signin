@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>日立智能养老系统</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/signin_add.css" rel="stylesheet" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/signin_add.js"></script>
+  </head>
+  <body class="text-center" id="mainPage">
+    <header>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid d-flex justify-content-between">
+          <div class="d-flex justify-content-start align-items-center">
+            <button type="button" class="btn btn-dark goBack">
+              <i class="fas fa-chevron-left"></i> <strong>&nbsp;返回</strong>
+            </button>
+            <div class="userInfo">张三峰 (ID: 1000010)</div>
+          </div>
+          <strong>日立智能养老系统</strong>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <div class="container-fluid">
+        <h2>今日训练项目</h2>
+
+        <div id="eventList">
+          <ul class="d-flex flex-row justify-content-start">
+            <li class="card1" ref="brain">
+              <h3>脑训练</h3>
+              <button type="button" class="btn btn-link btn-lg btn-block">
+                开始
+              </button>
+              <i class="fas fa-check fa-3x"></i>
+            </li>
+            <li class="card2" ref="magic">
+              <h3>魔法垫</h3>
+              <button type="button" class="btn btn-link btn-lg btn-block">
+                开始
+              </button>
+              <i class="fas fa-check fa-3x"></i>
+            </li>
+            <li class="card3" ref="pingpong">
+              <h3>乒乓球</h3>
+              <button type="button" class="btn btn-link btn-lg btn-block">
+                开始</button
+              ><i class="fas fa-check fa-3x"></i>
+            </li>
+            <li class="card4" ref="puji">
+              <h3>普济艾继</h3>
+              <button type="button" class="btn btn-link btn-lg btn-block">
+                开始</button
+              ><i class="fas fa-check fa-3x"></i>
+            </li>
+            <li class="card5" ref="poker">
+              <h3>棋牌</h3>
+              <button type="button" class="btn btn-link btn-lg btn-block">
+                开始</button
+              ><i class="fas fa-check fa-3x"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <h2>您距离下一次检测还有：<span class="counting">20</span> 天</h2>
+      </div>
+
+      <div class="container-fluid">
+        <h2>今日检测项目</h2>
+        <div id="detectList">
+          <ul class="d-flex flex-row justify-content-start">
+            <li class="detect1 detecting" ref="brain">
+              <h3 class="d-flex justify-content-center align-items-center">
+                <i></i>脑检测
+              </h3>
+              <button type="button" class="btn btn-link btn-lg btn-block">
+                开始
+              </button>
+              <i class="fas fa-check fa-3x"></i>
+            </li>
+            <li class="detect2" ref="finger">
+              <h3 class="d-flex justify-content-center align-items-center">
+                <i></i>手指检测
+              </h3>
+              <button type="button" class="btn btn-link btn-lg btn-block">
+                开始
+              </button>
+              <i class="fas fa-check fa-3x"></i>
+            </li>
+            <li class="detect3 detected" ref="walk">
+              <h3 class="d-flex justify-content-center align-items-center">
+                <i></i>步态分析
+              </h3>
+              <button type="button" class="btn btn-link btn-lg btn-block">
+                开始</button
+              ><i class="fas fa-check fa-3x"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner"><p>2018 Hitachi All rights reserved.</p></div>
+    </footer>
+  </body>
+</html>

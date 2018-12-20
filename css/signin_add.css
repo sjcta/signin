@@ -6,17 +6,13 @@
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: #333;
 }
 
 /* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
+.btn-primary {
+  border: 0;
+  background-color: #7ecef4;
 }
 
 
@@ -30,39 +26,36 @@ body {
 }
 
 body {
-  display: -ms-flexbox;
-  display: flex;
   color: #fff;
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  background: #f9f7de;
 }
 
-.cover-container {
-  border: 1px solid #FFF
+#loginPage .cover-container {
   max-width: 1280px;
-  background: #f9f7de url(../image/top_bg.png) center center no-repeat;
+  background: url(../image/top_bg.png) center center no-repeat;
   background-size: 90%;
 }
 
-main div.container {
+#loginPage main div.container {
   width: 55%;
   margin-right: 45%;
   color: #333;
   text-align: right;
 }
-main div.container h1 {
+#loginPage main div.container h1 {
   color: #715844;
 }
-main div.container p {
+#loginPage main div.container p {
   color: #b7b07a;
   line-height: 2;
 }
-form {
+#loginPage form {
   padding: 20px 0 5px;
 }
-form .form-group label i {
+#loginPage .form-group label i {
   color: #715844;
 }
-form .form-group input#userID {
+.form-control {
   border: 0;
   border-bottom: 1px solid #715844;
   border-radius: 0;
@@ -71,17 +64,17 @@ form .form-group input#userID {
   height: auto;
   color: #715844;
 }
-form.invalid input#userID {
+
+.was-validated .form-control:invalid ~ {
   border-bottom: 1px solid #dc3545;
+}
+.was-validated .form-control:invalid::placeholder {
+  color: #dc3545;
 }
 .invalid-feedback {
   text-align: left;
 }
 
-form .btn-primary {
-  border: 0;
-  background-color: #7ecef4;
-}
 /*
  * Header
  */
@@ -100,6 +93,253 @@ form .btn-primary {
 .masthead-brand span {
   display: none;
 }
+
+nav .navbar-brand {
+  font-size: .7rem;
+}
+
+
+/*
+ * navbar
+ */
+.navbar a.navbar-brand:hover {
+  background-color: #eee; 
+}
+div.userInfo {
+  border-left: 1px solid #ccc;
+  line-height: 25px;
+  padding-left: 25px;
+  margin-left: 15px;
+}
+
+
+/*
+ * main page
+ */
+.container-fluid {
+  text-align: left;
+  padding
+}
+#mainPage main {
+  padding: 20px;
+}
+#mainPage main .container-fluid {
+  padding: 20px 15px;
+}
+#mainPage main h2 {
+  color: #333;
+  font-size: 1.5rem;
+  line-height:2;
+}
+
+#eventList ul {
+  list-style: none;
+  padding: 20px;
+}
+#eventList ul li {
+  position: relative;
+  width: 15rem;
+  height: 20rem;
+  margin-right: 2rem;
+  background: #af9682 url(../image/gradation.png) bottom left repeat-x;
+  background-size: 100%;
+  border-radius: 10px;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); 
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#eventList ul li i.fa-check {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+#eventList ul li.completed i.fa-check {
+  display: block;
+}
+#eventList ul li::after { 
+  content: ""; 
+  border-radius: 10px; 
+  position: absolute; 
+  z-index: -1; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.5); 
+  opacity: 0; 
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); 
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); } 
+  
+#eventList ul li:not(.completed):hover { 
+  -webkit-transform: scale(1.1, 1.1); 
+  transform: scale(1.1, 1.1);
+  cursor: pointer;
+} 
+#eventList ul li:not(.completed):hover::after {
+  opacity: 1; 
+}
+
+#eventList ul li button {
+  position: absolute;
+  bottom: 0;
+  color: #FFF;
+}
+#eventList ul li button:hover {
+  text-decoration: none;
+}
+
+#eventList ul li h3 {
+  height: 65%;
+  text-align: right;
+  font-weight: 900;
+  letter-spacing: .2rem;
+  padding-top: 30%;
+  padding-right: 1.2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -2rem -2rem;
+}
+#eventList ul li.card1 h3 {
+  background-image: url(../image/event/brain.png);
+}
+#eventList ul li.card2 h3 {
+  background-image: url(../image/event/magic.png);
+}
+#eventList ul li.card3 h3 {
+  background-image: url(../image/event/pingpong.png);
+}
+#eventList ul li.card4 h3 {
+  background-image: url(../image/event/puji.png);
+}
+#eventList ul li.card5 h3 {
+  background-image: url(../image/event/poker.png);
+}
+
+#eventList ul li.working,
+#eventList ul li.worked
+ {
+  background-color: #ddd6a1;
+}
+#eventList ul li.working:hover {
+  cursor: -moz-not-allowed;
+  cursor: -webkit-not-allowed;
+  cursor: not-allowed;
+}
+
+#eventList ul li.completed {
+  background-color: #737373;
+  opacity: .5;
+}
+
+/* ================== detect =================== */
+h2 span.counting {
+  font-size: 3rem;
+  color: red;
+}
+#detectList ul li {
+  position: relative;
+  width: 25%;
+  height: 10rem;
+  margin-right: 2rem;
+  background: #f9f7de;
+  border: 1px solid #af9682;
+  border-radius: 10px;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); 
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#detectList ul li {
+  color: #af9682;
+  box-sizing: border-box;
+}
+
+#detectList ul li i.fa-check {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+#detectList ul li.completed i.fa-check {
+  display: block;
+}
+#detectList ul {
+  list-style: none;
+  padding: 20px;
+}
+#detectList ul li button {
+  position: absolute;
+  bottom: 0;
+  color: #af9682;
+}
+#detectList ul li button:hover {
+  text-decoration: none;
+}
+#detectList ul li h3 {
+  height: 70%;
+  margin: 0 10px;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: .2rem;
+  border-bottom: 1px solid #af9682;;
+}
+#detectList ul li h3 i {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  
+}
+#detectList ul li h3 path {
+  fill: #af9682;
+}
+#detectList ul li.detect1 h3 i {
+  background: url(../image/detect/brain.svg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#detectList ul li.detect2 h3 i {
+  background: url(../image/detect/tap.svg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#detectList ul li.detect3 h3 i {
+  background: url(../image/detect/walk.svg) 0 0 no-repeat;
+  background-size: 100%;
+}
+#detectList ul li::after { 
+  content: ""; 
+  border-radius: 10px; 
+  position: absolute; 
+  z-index: -1; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.5); 
+  opacity: 0; 
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); 
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); } 
+  
+#detectList ul li:not(.completed):hover { 
+  -webkit-transform: scale(1.1, 1.1); 
+  transform: scale(1.1, 1.1);
+  background: #af9682;
+  cursor: pointer;
+  border: 0;
+}
+  
+#detectList ul li:not(.completed):hover i { 
+  filter:contrast(200%) brightness(200%);
+}
+#detectList ul li:not(.completed):hover h3 {
+  border-bottom: 1px solid #FFF;
+  color: #FFF;
+}
+#detectList ul li:not(.completed):hover button {
+  color: #FFF;
+}
+#detectList ul li:not(.completed):hover::after {
+  opacity: 1; 
+}
+
+
+
 
 /*
  * Cover
